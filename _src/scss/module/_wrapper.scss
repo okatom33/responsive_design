@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+
+  .wrapper {
+    position: relative;
+    overflow: hidden;
+    background-image: none;
+
+    &-hidden {
+      display: none;
+    }
+  }
+
+  .wrapperPc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+$mq-breakpoint-small: 750px;
+ 
+//タブレットなど端末向きのmixin
+// @mixin mq-middle {
+//   @media (min-width: $mq-breakpoint-small) and (max-width: $mq-breakpoint-large - 1) {
+//     @content;
+//   }
+// }
+ 
+//スマートフォンなど端末向きのmixin
+@mixin mq-small {
+  //600px未満となるように、$mq-breakpoint-smallから1を引く
+  @media (max-width: #{$mq-breakpoint-small - 1}) {
+    @content;
+  }
+}
+
+@mixin mq-large {
+  @media (min-width: #{$mq-breakpoint-small}) {
+    @content;
+  }
+}

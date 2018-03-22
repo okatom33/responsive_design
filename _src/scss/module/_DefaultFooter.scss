@@ -1,0 +1,57 @@
+.DefaultFooter {
+  $_ancestor:&;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 210px;
+  &_snss{
+    width: 200px;
+    display: flex;
+  }
+  &_sns{
+    width: 60px;
+    height: 30px;
+    margin-left:10px;
+    &-facebook{
+      #{$_ancestor}_snsLink{
+        background: url(../img/icon_facebook.svg) no-repeat 50% 50% #4c72bb;
+        background-size:20px 15px;
+        display: block;
+        width: 60px;
+        height: 30px;
+      }
+    }
+    &-twitter{
+      #{$_ancestor}_snsLink{
+        background: url(../img/icon_twitter.svg) no-repeat 50% 50% #1fa0e4;
+        background-size:20px 12px;
+        display: block;
+        width: 60px;
+        height: 30px;
+      }
+    }
+    &-hatena{
+      #{$_ancestor}_snsLink{
+        background: url(../img/icon_hatena_white.png) no-repeat 50% 50% #017fde;
+        background-size:22px auto;
+        display: block;
+        width: 60px;
+        height: 30px;
+      }
+    }
+  }
+  &_snsLink{
+    border-radius: 3px;
+    text-indent: -9999px;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  &_copyright{
+    color:#fff;
+    padding-top:10px;
+    @include font-size(12);
+    text-align: right;
+    @extend .fontRoboto;
+  }
+}
